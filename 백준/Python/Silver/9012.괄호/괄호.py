@@ -1,16 +1,21 @@
+import sys
+from collections import deque
+input = sys.stdin.readline
+
 n=int(input())
 for x in range(0,n):
-    data=input()
-    p=0
+    data=input().rstrip()
+    p=deque()
     test=True
-    for k in range(0,len(data)):
-        if data[k]=='(':
-            p=p+1
+    for k in data:
+        if k=='(':
+            p.append(k)
         else:
-            p=p-1
-        if p<0:
-            test=False
-    if p!=0:
+            try:
+                p.pop()
+            except:
+                test=False
+    if len(p)>0:
         test=False
     if test:
         print('YES')
