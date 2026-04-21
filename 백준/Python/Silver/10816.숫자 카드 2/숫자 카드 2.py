@@ -13,9 +13,10 @@ for x in card:
         counting[x]+=1
     else:
         counting[x]=1
-        
+
+write=sys.stdout.write
 for y in finding:
     if y in counting:
-        print(counting[y], end=' ')
+        write(str(counting[y])+' ')
     else:
-        print('0',end=' ')
+        write('0 ')
