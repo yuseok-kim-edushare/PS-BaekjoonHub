@@ -12,4 +12,6 @@ else:
         if len(idx) < m:
             if x[0]<=s0:
                 idx.append(x[1])
+        else:
+            break
 print(*idx)
