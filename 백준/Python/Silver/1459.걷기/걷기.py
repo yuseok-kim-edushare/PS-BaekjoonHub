@@ -13,8 +13,8 @@ else:
         test.append(maxi * s) #만약 좌표 2개 다 홀수거나 짝수면 대각선 이동만으로 도달 가능
     else: #만약 어느 하나만 짝수라면 최고값 까지 대각선 이동하고 한칸 직선 이동 사용
         test.append(maxi * s + w)
-        test.append((maxi-1) * s + w)
-    answer = min(test)
+        test.append((maxi-1) * s + w) #또는 직전까지 대각선 + 직선 1회 이
+    answer = min(test) #가능한 이동 경과 시간 경우들 중 최솟값 호
 print(answer)
 
 
