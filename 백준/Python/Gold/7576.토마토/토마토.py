@@ -25,8 +25,8 @@ dr = [(0, 1), (0, -1), (1, 0), (-1, 0)] #변위 목록
 nextqueue = deque()
 # Do BFS
 def bfs():
-    global remaining
-    global countDays
+    global remaining #남은 토마토 개수와 경과일 수를 
+    global countDays #전역 변수로 당겨 써야 했어요.
     while queue:
         y, x = queue.popleft() #큐에서 BFS 탐색 시
         for i in range(4):
@@ -34,13 +34,15 @@ def bfs():
             if 0 <= ax  <m and 0 <= ay < n: #이동 대상 범위가 좌표 범위 안이면
                 if box[ay][ax] == 0:
                     nextqueue.append((ay,ax))
+                    #오늘 익은 토마토 = 내일 익어갈 토마토를 찾을 BFS 출발점들
                     box[ay][ax] = 1
                     remaining -= 1
-    if nextqueue:
+    if nextqueue: 
         queue.extend(nextqueue)
         nextqueue.clear()
         countDays += 1
-    if queue: bfs()
+    if remaining != 0: #익어야 할 토마토가 없고
+        if queue: bfs() #오늘 익은 토마토가 있으면 내일도 익힐 토마토가 있는지 확인
 
 bfs()
 if remaining>0:
