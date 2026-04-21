@@ -22,7 +22,6 @@ for k in range(n):
 delta=summation-integrate
 
 while (abs(delta/integrate)>0.0001):
-    cnt+=1
     if delta<0:
         epslion=(epslion+b)/2
     else:
