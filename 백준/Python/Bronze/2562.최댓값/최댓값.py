@@ -1,0 +1,36 @@
+m=int(input())
+n2=int(input())
+n3=int(input())
+n4=int(input())
+n5=int(input())
+n6=int(input())
+n7=int(input())
+n8=int(input())
+n9=int(input())
+mi=1
+if(n2>m):
+    m=n2
+    mi=2
+if(n3>m):
+    m=n3
+    mi=3
+if(n4>m):
+    m=n4
+    mi=4
+if(n5>m):
+    m=n5
+    mi=5
+if(n6>m):
+    m=n6
+    mi=6
+if(n7>m):
+    m=n7
+    mi=7
+if(n8>m):
+    m=n8
+    mi=8
+if(n9>m):
+    m=n9
+    mi=9
+print(m)
+print(mi)

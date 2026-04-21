@@ -1,0 +1,6 @@
+a,b=input().split()
+a=list(a)
+b=list(b)
+a=list(map(int,a))
+b=list(map(int,b))
+print(sum(a)*sum(b))
