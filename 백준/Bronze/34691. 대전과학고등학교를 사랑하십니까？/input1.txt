@@ -1,4 +1,0 @@
-animal
-flower
-tree
-end

@@ -1,5 +1,0 @@
-alice dave
-alice carol
-alice bob
-eve mallory
-peggy victor
