@@ -13,14 +13,14 @@ for _ in range(v):
     vertex[b].append(a)
     #간선 목록을 받아서 각 정점 번호에 연결된 상대방을 기록할 거에요
 
-infected = [1]
+infected = set([1])
 
 def dfs(idx):
     for i in vertex[idx]:
         if i in infected:
             pass
         else:
-            infected.append(i)
+            infected.add(i)
             dfs(i)
 
 dfs(1)
