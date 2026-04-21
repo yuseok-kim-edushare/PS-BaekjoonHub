@@ -1,0 +1,7 @@
+a=input()
+b=input()
+c=int(input())
+numeric=int(a)+int(b)-(c)
+string=int(str(a+b))-(c)
+print(numeric)
+print(string)
