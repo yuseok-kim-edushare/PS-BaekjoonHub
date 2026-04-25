@@ -1,3 +1,5 @@
+-- ToDo: 이거 Group By로 푸는 유형입니다 안내 되어 있었는데 왜 난 CTE로 풀었을까요?
+
 WITH RECURSIVE Combinations AS (
     -- 1. Anchor Member: 1개짜리 조합 생성
     SELECT 
